@@ -1,29 +1,21 @@
-let obj = { farbe: "gelb", höhe: 115 };
-for (let element in obj) {
-  console.log(element, obj[element]);
+console.log(this);
+
+function sandra(a) {
+  return (a > -10) && (a < 10);
 }
 
-let list = ["apfel", "birne", "orange"];
-for (let i = 0; i < list.length; i = i + 1) {
-  console.log(list[i]);
+function xor(a,b)
+{if(){
+return false
+} 
+if(){
+return true
 }
-
-//summen function
-let f = [1, 2, 3, 4];
-
-function sum(f) {
-  let summe = 0;
-  let i = 0;
-  for (i; i < f.length; i = i + 1) {
-    let el = f[i];
-    summe = summe + el;
-  }
-  return i;
+if(){
+return true
 }
-console.log(sum(f));
+if(){
+return false
+}}
 
-{
-  let x = 1;
-}
-
-console.log(x);
+console.log(xor(true,true))
