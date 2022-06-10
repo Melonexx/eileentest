@@ -1,12 +1,16 @@
-let o = { name: "ida", 4: true };
-console.log(o[2 + 2]);
-console.log(o[4]);
-console.log(o[-3]);
+let x = {};
+let y = {};
+console.log(x === y);
+y = x;
+console.log(x === y);
 
-let ob = {};
-ob.name = "eileen";
-console.log(ob);
-ob.age = 12;
-console.log(ob);
-delete ob.age;
-console.log(ob);
+let a = 1;
+let b = 1;
+console.log(a === b);
+b = 2;
+console.log(a === b);
+
+console.log("1" == 1);
+console.log("0" == 0);
+console.log("" == 0);
+console.log("1.52" == 1.52);
