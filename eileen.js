@@ -1,16 +1,29 @@
-let x = {};
-let y = {};
-console.log(x === y);
-y = x;
-console.log(x === y);
+// if else
+if ("hugo") {
+  console.log("hai");
+} else {
+  console.log("schü");
+}
 
-let a = 1;
-let b = 1;
-console.log(a === b);
-b = 2;
-console.log(a === b);
+if (NaN) {
+  console.log("hai");
+} else {
+  console.log("schü");
+}
+if (1) {
+  console.log("hai");
+} else {
+  console.log("schü");
+}
+if (null) {
+  console.log("hai");
+} else {
+  console.log("schü");
+}
 
-console.log("1" == 1);
-console.log("0" == 0);
-console.log("" == 0);
-console.log("1.52" == 1.52);
+if (0 == null) {
+  //achtung
+  console.log("hai");
+} else {
+  console.log("schü");
+}
