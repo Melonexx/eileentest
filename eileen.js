@@ -23,6 +23,7 @@ console.log(product(2, 0) === 0);
 
 /**prüft ob zahl negativ ist */
 function negativ(a) {
+  console.log("hai");
   if (a < 0) {
     return true;
   } else {
@@ -33,3 +34,15 @@ function negativ(a) {
 console.log(negativ(2) === false);
 console.log(negativ(-2) === true);
 console.log(negativ(0) === false);
+
+// function negativ mit weniger zeichen schreiben
+
+function negative(a) {
+  //wenn man functionen gleich benennt, werden sie überschrieben
+  console.log("haii");
+  return a < 0;
+}
+
+console.log(negative(2) === false);
+console.log(negative(-2) === true);
+console.log(negative(0) === false);
