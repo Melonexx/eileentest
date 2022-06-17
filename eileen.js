@@ -1,12 +1,10 @@
-"use strict";
-let list = ["apfel", "börne", "banane"];
+let o = { name: "eileen", age: 22 };
 
-let a = 0;
-for (let item of list) {
-  console.log(a, item);
-  a++;
+for (let key in "hugo") {
+  console.log(key, o[key]);
 }
 
-for (let i = 0; i < list.length; i++) {
-  console.log(list[i]);
+let list = ["äpfel", "banane"];
+for (let key in list) {
+  console.log(key, list[key]);
 }
