@@ -1,19 +1,12 @@
+"use strict";
+let list = ["apfel", "börne", "banane"];
+
 let a = 0;
-while (a < 10) {
-  a++;
-  console.log(a);
-}
-
-let list = ["apfel", "börne"];
-console.log(list);
-list.push("banane");
-console.log(list);
-
-a = 0;
-console.log(a);
-
-while (a < list.length) {
-  console.log(list[a]);
+for (let item of list) {
+  console.log(a, item);
   a++;
 }
-console.log("hai");
+
+for (let i = 0; i < list.length; i++) {
+  console.log(list[i]);
+}
