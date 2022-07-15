@@ -1,63 +1,58 @@
 "use strict"
 
-//functions
+//zweites beispiel zur erstellung von classes =wohnung
 
-//function die eine array erstellt von 1-n
-/**erstellt array von 1-n*/
-function arrayersteller (n){
-  let list1=[]
-  for(let i=1;i<=n;i++){
-    list1.push(i)
+class Wohnung {
+  location;
+  constructor(location) {
+    this.location = location
   }
-  return list1
 }
-console.log(arrayersteller(10))
-
-//function die eine array mit allen ungeraden zahlen 1-n erstellt
-//version 1
-/**erstellt array mit ungeraden zahlen 1-n */
-function oddnumberarray(n){
-  let list1=[]
-  for(let i=1;i<=n;i++){
-    if(i%2===1){
-      list1.push(i)
-    }
-  }
-  return list1
-}
-console.log(oddnumberarray(12))
-
-//version 2
-/**erstellt array mit ungeraden zahlen 1-n */
-function oddnumberarray2(n){
-  let list2 =[]
-  for(let i=1;i<=n;i+2){
-    list2.push(i)
-  }
-  return list2
-}
-console.log(oddnumberarray(12))
-
-//xor function
-/**xor */
-function xor(boolean1, boolean2){
-  if(boolean1===true&&boolean2===true){
-    return false
-  }
-  if(boolean1===true&&boolean2===false){
-    return true
-  }
-  if(boolean1===false&&boolean2===true){
-    return true
-  }
-  if(boolean1===false&&boolean2===false){
-    return false
+class Zimmer {
+  height;
+  constructor(height) {
+    this.height = height
   }
 }
 
-console.log(xor(true,true)===false) //testfall 1
-console.log(xor(true,false)===true) //testfall 2
-console.log(xor(false,true)===true) //testfall 3
-console.log(xor(false,false)===false) //testfall 4
+class WohnZimmer extends Zimmer {
+  constructor(height) {
+    super(height)
+  }
+}
 
+class SchlafZimmer extends Zimmer {
+  constructor(height) {
+    super(height)
+  }
+}
 
+class Möbel extends Zimmer{
+  whatKind;
+  colour;
+  material;
+  constructor(height, whatKind,colour,material){
+  super(height)
+  this.whatKind=whatKind
+  this.colour=colour
+  this.material=material
+
+  }
+  
+}
+
+const wohnZimmer = new WohnZimmer(20)
+const schlafZimmer = new SchlafZimmer(18)
+const universalZimmer = new Zimmer(10)
+const universalZimmer2 = new Zimmer(12)
+const möbelStück1 = new Möbel(1,"stuhl","black","wood")
+const möbelStück2 = new Möbel(2, "bed", "white","wood")
+
+const zimmer = [wohnZimmer, schlafZimmer, universalZimmer, universalZimmer2]
+
+const wohnung1 = new Wohnung("berlin")
+
+console.log(zimmer)
+console.log(wohnZimmer)
+console.log(möbelStück1)
+console.log(möbelStück2)
