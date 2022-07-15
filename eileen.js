@@ -1,61 +1,63 @@
 "use strict"
 
-class Forest {
-  trees;
-  colour;
-  constructor(trees, colour) {
-    this.trees = trees
-    this.colour = colour
-  }
+//functions
 
-  addTree(tree) {
-    this.trees.push(tree)
+//function die eine array erstellt von 1-n
+/**erstellt array von 1-n*/
+function arrayersteller (n){
+  let list1=[]
+  for(let i=1;i<=n;i++){
+    list1.push(i)
   }
+  return list1
+}
+console.log(arrayersteller(10))
 
-  changeColour(newColour) {
-    this.colour = newColour
+//function die eine array mit allen ungeraden zahlen 1-n erstellt
+//version 1
+/**erstellt array mit ungeraden zahlen 1-n */
+function oddnumberarray(n){
+  let list1=[]
+  for(let i=1;i<=n;i++){
+    if(i%2===1){
+      list1.push(i)
+    }
+  }
+  return list1
+}
+console.log(oddnumberarray(12))
+
+//version 2
+/**erstellt array mit ungeraden zahlen 1-n */
+function oddnumberarray2(n){
+  let list2 =[]
+  for(let i=1;i<=n;i+2){
+    list2.push(i)
+  }
+  return list2
+}
+console.log(oddnumberarray(12))
+
+//xor function
+/**xor */
+function xor(boolean1, boolean2){
+  if(boolean1===true&&boolean2===true){
+    return false
+  }
+  if(boolean1===true&&boolean2===false){
+    return true
+  }
+  if(boolean1===false&&boolean2===true){
+    return true
+  }
+  if(boolean1===false&&boolean2===false){
+    return false
   }
 }
-class Tree {
-  height;
-  constructor(height) {
-    this.height = height
-  }
-  grow(value) {
-    this.height = this.height + value
-  }
 
-}
-
-class NadelBaum extends Tree {
-  constructor(height) {
-    super(height)
-  }
-}
-
-class LaubBaum extends Tree {
-  constructor(height) {
-    super(height)
-  }
-}
-
-const baum1 = new Tree(6)
-const baum2 = new Tree(7)
-const nadelBaum1 = new NadelBaum(8)
-const laubBaum1 = new LaubBaum(4)
-
-const trees = [baum1, baum2, nadelBaum1, laubBaum1]
-const wald1 = new Forest(trees, "green")
+console.log(xor(true,true)===false) //testfall 1
+console.log(xor(true,false)===true) //testfall 2
+console.log(xor(false,true)===true) //testfall 3
+console.log(xor(false,false)===false) //testfall 4
 
 
-
-
-console.log(wald1)
-
-wald1.changeColour("yellow")
-
-console.log(wald1)
-
-baum1.grow(16)
-
-console.log(baum1)
