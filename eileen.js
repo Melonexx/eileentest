@@ -7,8 +7,11 @@ console.log(window.document)
 
 let queryselectordomeins = document.querySelector("#eins")
 
-console.log(queryselectordomeins)
+const paragraphtogglebutton = document.querySelector("#paragraphtogglebutton")
 
-queryselectordomeins.classList.add("red")
 
-console.log(queryselectordomeins)
+/**toggled die class "red" auf dem übergebenem element */
+paragraphtogglebutton.addEventListener("click", function (event) {
+  console.log(event)
+  queryselectordomeins.classList.toggle("red")
+})
