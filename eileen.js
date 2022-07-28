@@ -1,16 +1,15 @@
 "use strict"
+//was ist der unterschied zwischen queryselector und getelementbyid??
+let changedTheme = document.querySelector("#changedTheme")
+let changingButton = document.getElementById("changeButton")
 
-let blueTheme = document.querySelector("#umrissBlau")
-let pinkTheme = document.querySelector("#umrissPink")
+const changeButton = document.querySelector("#changeButton")
 
-const blueButton = document.querySelector("#blueButton")
-const pinkButton = document.querySelector("#pinkButton")
 
-blueButton.addEventListener("click",function(){
-blueTheme.classList.toggle("bluei")
+changeButton.addEventListener("click",function(){
+changedTheme.classList.toggle("bluei")
+changingButton.innerHTML="reset"
 })
 
-pinkButton.addEventListener("click",function(){
-  pinkTheme.classList.toggle("pinki")
-})
+
 
