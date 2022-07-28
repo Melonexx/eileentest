@@ -1,33 +1,40 @@
 "use strict"
 
-console.log(window.document)
+let einMehr = document.getElementById("einsMehr")
 
+let einWeniger = document.getElementById("einsWeniger")
 
+let zweiMehr = document.getElementById("zweiMehr")
 
-const x = "#eins";
-let queryselectordomeins = document.querySelector(x)
+let zweiWeniger = document.getElementById("zweiWeniger")
 
-const paragraphtogglebutton = document.querySelector("#paragraphtogglebutton")
+let counter = document.getElementById("anzahl")
 
+let reset = document.getElementById("reset")
 
-/**toggled die class "red" auf dem übergebenem element */
-paragraphtogglebutton.addEventListener("click", function (event) {
-  console.log(event)
-  queryselectordomeins.classList.toggle("red")
+let zähler = 0
+
+einMehr.addEventListener("click", function(){
+  zähler=zähler+1
+  counter.innerHTML=zähler
 })
 
-const clickanzahl = document.querySelector("#clickizähler")
+einWeniger.addEventListener("click",function(){
+zähler=zähler-1
+counter.innerHTML=zähler
+})
 
+zweiMehr.addEventListener("click",function(){
+  zähler=zähler+2
+  counter.innerHTML=zähler
+})
 
+zweiWeniger.addEventListener("click",function(){
+  zähler=zähler-2
+  counter.innerHTML=zähler
+  })
 
-function clickzahl() {
-  counter++;
-  console.log(counter)
-}
-
-
-
-/**zeigt anzahl wie häufig der button geclicked wurde in console an */
-clickanzahl.addEventListener("click", clickzahl)
-
-let counter = 0 
+reset.addEventListener("click",function(){
+  zähler=0
+  counter.innerHTML=zähler
+})

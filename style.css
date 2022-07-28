@@ -1,3 +1,33 @@
 .red {
     background-color: red;
 }
+
+#anzahl {
+    font-size: 100px;
+    text-align: center;
+    
+}
+
+#großerUmriss{
+    border-style: ridge;
+    border-radius: 30px;
+    border-width: 10px;
+    border-color: palevioletred;
+}
+
+#buttonsUmriss {
+text-align: center;
+}
+button{
+    height: 75px;
+    width: 75px;
+    font-size: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: palevioletred;
+    border-style: ridge;
+}
+ #reset{
+    width: auto;
+ }
