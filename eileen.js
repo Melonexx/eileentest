@@ -1,40 +1,16 @@
 "use strict"
 
-let einMehr = document.getElementById("einsMehr")
+let blueTheme = document.querySelector("#umrissBlau")
+let pinkTheme = document.querySelector("#umrissPink")
 
-let einWeniger = document.getElementById("einsWeniger")
+const blueButton = document.querySelector("#blueButton")
+const pinkButton = document.querySelector("#pinkButton")
 
-let zweiMehr = document.getElementById("zweiMehr")
-
-let zweiWeniger = document.getElementById("zweiWeniger")
-
-let counter = document.getElementById("anzahl")
-
-let reset = document.getElementById("reset")
-
-let zähler = 0
-
-einMehr.addEventListener("click", function(){
-  zähler=zähler+1
-  counter.innerHTML=zähler
+blueButton.addEventListener("click",function(){
+blueTheme.classList.toggle("bluei")
 })
 
-einWeniger.addEventListener("click",function(){
-zähler=zähler-1
-counter.innerHTML=zähler
+pinkButton.addEventListener("click",function(){
+  pinkTheme.classList.toggle("pinki")
 })
 
-zweiMehr.addEventListener("click",function(){
-  zähler=zähler+2
-  counter.innerHTML=zähler
-})
-
-zweiWeniger.addEventListener("click",function(){
-  zähler=zähler-2
-  counter.innerHTML=zähler
-  })
-
-reset.addEventListener("click",function(){
-  zähler=0
-  counter.innerHTML=zähler
-})
